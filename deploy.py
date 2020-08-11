@@ -20,7 +20,6 @@ from bokeh.models.widgets import Div
 
 if st.button('EDA Dashboard'):
     js = "window.open('https://hydrauliceda.shinyapps.io/draft1_blank/#section-data-exploration/')"  # New tab or window
-    js = "window.location.href = 'https://hydrauliceda.shinyapps.io/draft1_blank/#section-data-exploration/'"  # Current tab
     html = '<img src onerror="{}">'.format(js)
     div = Div(text=html)
     st.bokeh_chart(div)
