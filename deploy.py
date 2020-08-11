@@ -3,9 +3,7 @@
 
 import streamlit as st 
 import numpy as np
-from sklearn import datasets
 import pandas as pd
-import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -13,7 +11,7 @@ from sklearn.linear_model import LogisticRegression
 import xgboost as xgb
 import lightgbm as lgb
 from sklearn.ensemble import RandomForestClassifier
-import os
+
 
 st.title('Research Project')
 
