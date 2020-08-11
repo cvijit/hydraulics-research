@@ -15,13 +15,15 @@ import lightgbm as lgb
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, classification_report, f1_score
 
-import webbrowser
+from bokeh.models.widgets import Div
 
-url_dashboard = 'https://hydrauliceda.shinyapps.io/draft1_blank/#section-data-exploration'
 
 if st.button('EDA Dashboard'):
-    webbrowser.open_new_tab(url_dashboard)
-
+    js = "window.open('https://hydrauliceda.shinyapps.io/draft1_blank/#section-data-exploration/')"  # New tab or window
+    js = "window.location.href = 'https://hydrauliceda.shinyapps.io/draft1_blank/#section-data-exploration/'"  # Current tab
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
 
 st.title('Research Project')
 
