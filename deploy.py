@@ -15,6 +15,9 @@ import lightgbm as lgb
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, classification_report, f1_score
 
+import bokeh
+import bokeh.layouts
+import bokeh.models
 from bokeh.models.widgets import Div
 
 
