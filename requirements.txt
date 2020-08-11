@@ -2,4 +2,6 @@ streamlit==0.61.0
 pandas==0.25.3
 numpy==1.18.1
 scikit-learn==0.22.1
-xgboost
+xgboost==1.0.2
+lightgbm==2.3.1
+sklearn.ensemble
