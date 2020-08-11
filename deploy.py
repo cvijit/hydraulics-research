@@ -15,6 +15,13 @@ import lightgbm as lgb
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, classification_report, f1_score
 
+import webbrowser
+
+url_dashboard = 'https://hydrauliceda.shinyapps.io/draft1_blank/#section-data-exploration'
+
+if st.button('EDA Dashboard'):
+    webbrowser.open_new_tab(url_dashboard)
+
 
 st.title('Research Project')
 
