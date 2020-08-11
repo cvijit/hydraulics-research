@@ -141,7 +141,7 @@ clf.fit(X_train, y_train)
 
 import pickle
 
-load_clf = pickle.load(open('/Users/vijitchekkala/Desktop/final_model/model_clf_1.pkl','rb'))
+load_clf = pickle.load(open('model_clf_1.pkl','rb'))
 
 
 y_pred = load_clf.predict(X_test)
