@@ -13,6 +13,7 @@ from sklearn.linear_model import LogisticRegression
 import xgboost as xgb
 import lightgbm as lgb
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix, classification_report, f1_score
 
 
 st.title('Research Project')
@@ -138,19 +139,14 @@ clf = get_classifier(classifier_name, params)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 clf.fit(X_train, y_train)
-
-import pickle
-
-load_clf = pickle.load(open('model_clf_1.pkl','rb'))
-
-
-y_pred = load_clf.predict(X_test)
+y_pred = clf.predict(X_test)
 
 acc = accuracy_score(y_test, y_pred)
+cm = confusion_matrix(y_test, y_pred) 
 
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc*100)
-
+st.write(f'Confusion matrix =', cm)
 
 
 
