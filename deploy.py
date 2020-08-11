@@ -43,11 +43,11 @@ classifier_name = st.sidebar.selectbox('Select classifier',
 #X.head
 #X.shape
 #list(X.columns.values) 
-url_1 = 'https://github.com/cvijit/hydraulics-research/blob/master/Coolers_data.csv?raw=true'
-url_2 = 'https://github.com/cvijit/hydraulics-research/blob/master/Valves_data.csv?raw=true'
-url_3 = 'https://github.com/cvijit/hydraulics-research/blob/master/Pump_data.csv?raw=true'
-url_4 = 'https://github.com/cvijit/hydraulics-research/blob/master/Accumulator_data.csv?raw=true'
-url_5 = 'https://github.com/cvijit/hydraulics-research/blob/master/Stable_data.csv?raw=true'
+url_1 = 'https://github.com/cvijit/hydraulics-research/blob/master/cooler_deploy.csv?raw=true'
+url_2 = 'https://github.com/cvijit/hydraulics-research/blob/master/valve_deploy.csv?raw=true'
+url_3 = 'https://github.com/cvijit/hydraulics-research/blob/master/pump_deploy.csv?raw=true'
+url_4 = 'https://github.com/cvijit/hydraulics-research/blob/master/accumulator_deploy.csv?raw=true'
+url_5 = 'https://github.com/cvijit/hydraulics-research/blob/master/stable_deploy.csv?raw=true'
 
 def get_dataset(dataset_name):
     if dataset_name == 'Coolers':
