@@ -45,32 +45,26 @@ classifier_name = st.sidebar.selectbox('Select classifier',
                                       ('Logistic Regression','Artificial Neural Network','XGBoost', 'Light GBM','Catboost','Random Forest')
 )
 
-#data= pd.read_csv('/Users/vijitchekkala/Desktop/Valves_data.csv')
-#data.shape
-#Y= data.iloc[:,-1]
-#Y
-
-#X = data.iloc[:,0:17]
-#X.head
-#X.shape
-#list(X.columns.values) 
+#Reading the csv foles from GitHub
+url_data = 'https://github.com/cvijit/hydraulics-research/blob/master/umap_data.csv?raw=true'
 url_1 = 'https://github.com/cvijit/hydraulics-research/blob/master/cooler_deploy.csv?raw=true'
 url_2 = 'https://github.com/cvijit/hydraulics-research/blob/master/valve_deploy.csv?raw=true'
 url_3 = 'https://github.com/cvijit/hydraulics-research/blob/master/pump_deploy.csv?raw=true'
 url_4 = 'https://github.com/cvijit/hydraulics-research/blob/master/accumulator_deploy.csv?raw=true'
 url_5 = 'https://github.com/cvijit/hydraulics-research/blob/master/stable_deploy.csv?raw=true'
 
+#Function to read the dataset according to the choosen dataset
 def get_dataset(dataset_name):
     if dataset_name == 'Coolers':
-        data = pd.read_csv(url_1,index_col=0)
+        data = pd.read_csv(url_data,index_col=0)
     elif dataset_name == 'Valves':
-        data = pd.read_csv(url_2,index_col=0)
+        data = pd.read_csv(url_data,index_col=0)
     elif dataset_name == 'Pump_Leakage':
-        data = pd.read_csv(url_3,index_col=0)
+        data = pd.read_csv(url_data,index_col=0)
     elif dataset_name == 'Hydraulic_Accumulator':
-        data = pd.read_csv(url_4,index_col=0)
+        data = pd.read_csv(url_data,index_col=0)
     else:
-        data = pd.read_csv(url_5,index_col=0)
+        data = pd.read_csv(url_data,index_col=0)
     X = data.iloc[:,0:17]
     y= data.iloc[:,-1]
     return X, y
