@@ -40,7 +40,7 @@ st.write(f"## {dataset_name} Dataset")
 
 #Choosing the classification algorithm
 classifier_name = st.sidebar.selectbox('Select classifier', 
-                                      ('Logistic Regression','Artificial Neural Network','XGBoost', 'Light GBM',
+                                      ('Logistic Regression','XGBoost', 'Light GBM',
                                        'Catboost','Random Forest')
 )
 
